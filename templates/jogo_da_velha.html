@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Game Arena</title>
+    <title>JOGO DA VELHA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style_velha.css') }}">
 </head>
 
 <body>
     <header>
-        <h1><strong>Selecione o seu jogo clássico: </strong></h1>
+        <h1><strong>Digite o seu nome para começar: </strong></h1>
         <div id="placar">
             <p>Jogador: <span id="nome-usuario">Visitante</span></p>
             <p>Vitórias: <span id="vitorias">0</span></p>
@@ -23,7 +23,7 @@
             <label>Modo de Jogo:</label>
             <select id="modo-jogo" style="padding: 5px; margin-bottom: 10px;">
                 <option value="pve">Jogador vs Robô</option>
-                <option value="pvp">Jogador vs Jogador (Local)</option>
+                <option value="pvp">Jogador vs Jogador</option>
             </select>
 
             <div id="inputs-jogadores">
