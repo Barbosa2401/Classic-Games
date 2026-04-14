@@ -1,0 +1,7 @@
+body { background: #1a1a1a; color: #f1c40f; font-family: monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(10, 30px); grid-template-rows: repeat(10, 30px); gap: 2px; border: 4px solid #333; background: #333; }
+.cell { width: 30px; height: 30px; background: #222; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: bold; border: 1px solid #444; }
+.cell.revealed { background: #444; cursor: default; }
+.cell.mine { background: #e74c3c; }
+.cell.flag { background: #f1c40f; }
+button { background: transparent; color: #f1c40f; border: 1px solid #f1c40f; padding: 10px; cursor: pointer; margin-top: 20px; }

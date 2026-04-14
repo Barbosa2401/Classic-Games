@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Chess - Arena</title>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_xadrez.css') }}">
+</head>
+<body>
+    <div class="config-xadrez">
+        <label>Modo:</label>
+        <select id="modo-xadrez">
+            <option value="pvp">Jogador vs Jogador</option>
+            <option value="pve">Jogador vs Robô</option>
+        </select>
+    </div>
+    <div class="game-container">
+        <h1>CHESS_PROTOCOL.SYS</h1>
+        
+        <div id="myBoard"></div>
+
+        <div class="status-panel">
+            <p>Status: <span id="status">Iniciando...</span></p>
+            <p>Turno: <span id="turno">Brancas</span></p>
+        </div>
+
+        <div class="controls">
+            <button onclick="location.href='/'">ABORTAR MISSÃO</button>
+            <button id="resetBtn">REINICIAR TABULEIRO</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="{{ url_for('static', filename='script_xadrez.js') }}"></script>
+</body>
+</html>

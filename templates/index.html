@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Arena - Seleção</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <h1>SELECIONE O SEU DESAFIO</h1>
+        
+        <form action="/jogar" method="POST" class="game-selector">
+            <label class="cyber-card">
+                <input type="radio" name="game-choice" value="velha" checked>
+                <div class="card-content">
+                    <span class="glitch-text">JOGO DA VELHA</span>
+                    <p>Clássico 3x3 contra Robô ou Amigo</p>
+                </div>
+            </label>
+
+            <label class="cyber-card">
+                <input type="radio" name="game-choice" value="cobra">
+                <div class="card-content">
+                    <span>JOGO DA COBRA</span>
+                    <p>Desvie das paredes e cresça</p>
+                </div>
+            </label>
+
+            <label class="cyber-card">
+                <input type="radio" name="game-choice" value="xadrez">
+                <div class="card-content">
+                    <span>XADREZ CYBER</span>
+                    <p>Estratégia pura</p>
+                </div>
+            </label>
+
+            <label class="cyber-card">
+                <input type="radio" name="game-choice" value="campo">
+                <div class="card-content">
+                    <span>CAMPO MINADO</span>
+                    <p>Cuidado onde pisa!</p>
+                </div>
+            </label>
+
+            <label class="cyber-card">
+                <input type="radio" name="game-choice" value="paciencia">
+                <div class="card-content">
+                    <span>PACIÊNCIA.EXE</span>
+                    <p>Organize o caos das cartas</p>
+                </div>
+            </label>
+
+            <label class="cyber-card">
+                <input type="radio" name="game-choice" value="dino">
+                <div class="card-content">
+                    <span>DINO_RUN.EXE</span>
+                    <p>Protocolo sem conexão</p>
+                </div>
+            </label>
+
+            <button type="submit" class="btn-launch">INICIAR CONEXÃO</button>
+        </form>
+    </div>
+</body>
+</html>

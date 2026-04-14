@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Protocol Campo Minado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_campo.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <h1>CAMPO MINADO</h1>
+        <div id="status-bar">Minas: <span id="minas-count">1</span></div>
+        <div id="grid" class="grid"></div>
+        <div class="controls">
+            <button onclick="location.href='/'">MENU INICIAL</button>
+            <button onclick="location.reload()">REINICIAR</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script_campo.js') }}"></script>
+</body>
+</html>

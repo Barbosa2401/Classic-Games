@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Solitaire - Protocol</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_paciencia.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <h1>SOLITAIRE_PROTOCOL.LOG</h1>
+        
+        <div class="solitaire-board">
+            <div class="top-row">
+                <div id="deck" class="pile stock">
+                    <div class="card back" style="position: relative; top: 0;"></div>
+                </div>
+                <div id="waste" class="pile waste"></div>
+                
+                <div class="foundations">
+                    <div id="f-1" class="pile foundation" data-suit="h"></div>
+                    <div id="f-2" class="pile foundation" data-suit="d"></div>
+                    <div id="f-3" class="pile foundation" data-suit="c"></div>
+                    <div id="f-4" class="pile foundation" data-suit="s"></div>
+                </div>
+            </div>
+
+            <div id="tableau" class="tableau">
+                </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="location.href='/'">RETORNAR AO MENU</button>
+            <button onclick="location.reload()">REBARALHAR</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script_paciencia.js') }}"></script>
+</body>
+</html>

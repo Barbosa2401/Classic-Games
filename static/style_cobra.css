@@ -1,0 +1,43 @@
+body {
+    background-color: #1a1a1a;
+    color: #00ff41; /* Verde Matrix */
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 { text-shadow: 0 0 10px #00ff41; }
+
+#snakeCanvas {
+    background-color: #000;
+    border: 4px solid #333;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+#placar {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background: #333;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00ff41;
+    color: #000;
+}

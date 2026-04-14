@@ -1,0 +1,44 @@
+body {
+    background-color: #1a1a1a;
+    color: #e74c3c;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#myBoard {
+    width: 450px;
+    margin: 20px auto;
+    border: 5px solid #333;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+}
+
+.status-panel {
+    background: #222;
+    padding: 15px;
+    border-left: 4px solid #e74c3c;
+    margin-bottom: 20px;
+}
+
+button {
+    background: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #e74c3c;
+    color: #fff;
+}

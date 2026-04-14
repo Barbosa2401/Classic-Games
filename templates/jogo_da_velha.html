@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Arena</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_velha.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1><strong>Selecione o seu jogo clássico: </strong></h1>
+        <div id="placar">
+            <p>Jogador: <span id="nome-usuario">Visitante</span></p>
+            <p>Vitórias: <span id="vitorias">0</span></p>
+        </div>
+    </header>
+    <main id="game-container">
+        <h2>Jogo da velha</h2>
+        <div id="config-jogo" style="background: #34495e; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+            <h3>Configurações</h3>
+            <label>Modo de Jogo:</label>
+            <select id="modo-jogo" style="padding: 5px; margin-bottom: 10px;">
+                <option value="pve">Jogador vs Robô</option>
+                <option value="pvp">Jogador vs Jogador (Local)</option>
+            </select>
+
+            <div id="inputs-jogadores">
+                <input type="text" id="nome-jogador1" placeholder="Nome Jogador 1 (X)" style="padding: 5px;">
+                <input type="text" id="nome-jogador2" placeholder="Nome Jogador 2 (O) ou Robô" style="padding: 5px;">
+            </div>
+    
+            <button id="btn-comecar" style="margin-top: 10px; padding: 8px 20px; cursor: pointer;">Confirmar e Iniciar</button>
+        </div>
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <button id="reset-btn">Reiniciar Jogo</button>
+        <p id="status"></p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script_velha.js') }}"></script>
+</body>
+   <footer>Criado em 2026 por Gabriel Barbosa de Oliveira, em um dia de sonosksksk</footer>
+</html>

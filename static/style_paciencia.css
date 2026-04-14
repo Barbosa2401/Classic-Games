@@ -1,0 +1,66 @@
+body { background: #1a1a1a; color: #fff; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+.solitaire-board { display: flex; flex-direction: column; gap: 30px; width: 850px; }
+.top-row { display: flex; gap: 20px; }
+.foundations { display: flex; gap: 10px; margin-left: auto; }
+.tableau { display: flex; gap: 15px; height: 500px; padding-top: 20px; }
+
+.pile { 
+    width: 100px; height: 140px; 
+    border: 2px solid #333; border-radius: 8px; 
+    position: relative; background: rgba(255,255,255,0.05); 
+}
+
+/* Indicador visual para colunas vazias */
+.tableau-column:empty::after {
+    content: "K";
+    color: rgba(255, 255, 255, 0.05);
+    font-size: 60px;
+    display: flex; justify-content: center; align-items: center; height: 100%;
+}
+
+.card {
+    width: 100px; height: 140px;
+    background: white; color: black;
+    border-radius: 6px; position: absolute;
+    border: 1px solid #999; display: flex;
+    flex-direction: column; padding: 8px;
+    box-sizing: border-box; cursor: grab;
+    font-weight: bold; font-size: 1.2rem;
+}
+
+.card.back { background: #e74c3c; color: transparent; border: 3px solid white; cursor: default; }
+.red { color: #e74c3c; }
+.black { color: #2c3e50; }
+
+.waste .card, .foundation .card { top: 0 !important; }
+
+button {
+    background: transparent; color: #fff; border: 1px solid #e74c3c;
+    padding: 10px 20px; cursor: pointer; margin-top: 20px;
+}
+
+.foundation[data-suit="h"]::before { content: "♥"; }
+.foundation[data-suit="d"]::before { content: "♦"; }
+.foundation[data-suit="c"]::before { content: "♣"; }
+.foundation[data-suit="s"]::before { content: "♠"; }
+
+.foundation::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.05); /* Bem clarinho no fundo */
+    z-index: 0;
+}
+
+/* Quando o monte está vazio, mostra um círculo de reciclar */
+.pile.stock:empty::before {
+    content: "↻";
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
